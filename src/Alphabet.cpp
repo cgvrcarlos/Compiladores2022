@@ -21,9 +21,9 @@ int Alphabet::size() const
 
 void Alphabet::print()
 {
-        cout << "El Alphabeto es => {";
+    cout << "El Alphabeto es => {";
 
-        set<char>::iterator it ;
+    set<char>::iterator it;
 
     for (it = symbols.begin() ; it != symbols.end() ; it++ )
     {
