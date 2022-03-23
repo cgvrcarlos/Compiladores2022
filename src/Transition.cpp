@@ -11,8 +11,3 @@ Transition::~Transition()
 	symbol = 0;
 	nextState = -1;
 }
-
-void Transition::print()
-{
-	cout << "δ(" << symbol <<") = " << nextState << endl;
-}
