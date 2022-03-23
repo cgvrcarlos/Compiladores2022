@@ -1,22 +1,24 @@
 # VARIABLES #
-INCDIR = ./inc
-OBJDIR = ./obj
-BINDIR = ./bin
-SRCDIR = ./src
+INCDIR = inc
+OBJDIR = obj
+BINDIR = bin
+SRCDIR = src
 
-TARGET = ./$(BINDIR)/out
-OBJS   = ./$(OBJDIR)/Alphabet.o
+TARGET = $(BINDIR)/out
+
+OBJS   = $(OBJDIR)/Alphabet.o \
+         $(OBJDIR)/main.o
 
 CFLAGS = -Wall -I$(INCDIR)
 
 # REGLAS #
 $(TARGET) : $(OBJS)
 	@mkdir -p $(BINDIR)
-	gpp $(CFLAGS) $(OBJS) -o $(TARGET)
+	g++ $(CFLAGS) $(OBJS) -o $(TARGET)
 
-$(OBJDIR)/%.o : $(SRCDIR)/%.c
+$(OBJDIR)/%.o : $(SRCDIR)/%.cpp
 	@mkdir -p $(OBJDIR)
-	gcc -c -MD $(CFLAGS) $< -o $@
+	g++ -c -MD $(CFLAGS) $< -o $@
 
 -include $(OBJDIR)/*.d
 
@@ -24,4 +26,4 @@ $(OBJDIR)/%.o : $(SRCDIR)/%.c
 .PHONY : clean
 
 clean :
-	@rm -r $(OBJDIR) $(BINDIR)
+	rm -r $(OBJDIR) $(BINDIR)

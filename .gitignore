@@ -1,0 +1,8 @@
+# Ignora todos los archivos objeto
+*.o
+
+# Ignora todas las dependencias
+*.d
+
+# Ignora el ejecutable
+out
