@@ -6,8 +6,9 @@ SRCDIR = src
 
 TARGET = $(BINDIR)/out
 
-OBJS   = $(OBJDIR)/Alphabet.o \
-         $(OBJDIR)/main.o
+OBJS   = $(OBJDIR)/main.o       \
+         $(OBJDIR)/Alphabet.o   \
+		 $(OBJDIR)/Transition.o
 
 CFLAGS = -Wall -I$(INCDIR)
 
