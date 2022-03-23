@@ -8,7 +8,8 @@ TARGET = $(BINDIR)/out
 
 OBJS   = $(OBJDIR)/main.o       \
          $(OBJDIR)/Alphabet.o   \
-		 $(OBJDIR)/Transition.o
+		 $(OBJDIR)/Transition.o \
+		 $(OBJDIR)/State.o
 
 CFLAGS = -Wall -I$(INCDIR)
 
