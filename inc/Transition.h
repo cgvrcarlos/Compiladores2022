@@ -16,9 +16,6 @@ public:
 	
 	/* Destructor por defecto */
 	~Transition();
-
-	/* Imprime Transicion Delta */
-	void print();
 };
 
 #endif // TRANSITION
