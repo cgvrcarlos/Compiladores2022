@@ -18,8 +18,8 @@ public:
 	~Transition();
 
 	/* Getters */
-	char getSymbol();
-	int getNextState();
+	char getSymbol() const;
+	int getNextState() const;
 };
 
 #endif // TRANSITION

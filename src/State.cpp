@@ -27,10 +27,9 @@ void State::print()
 {
 	cout << "Las transiciones del estado " << stateID << "son" << endl;
 
-	set<Transition>::iterator it;
-
-	for (it = deltaTransitions.begin(); it != deltaTransitions.end(); it++)
+	for (set<Transition>::iterator it = deltaTransitions.begin(); it != deltaTransitions.end(); it++)
 	{
+		cout << "δ(" << stateID << ", " << (*it).getSymbol() << ") = " << (*it).getNextState() << endl;
 	}
 	
 }

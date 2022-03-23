@@ -12,12 +12,12 @@ Transition::~Transition()
 	nextState = -1;
 }
 
-char Transition::getSymbol()
+char Transition::getSymbol() const
 {
 	return symbol;
 }
 
-int Transition::getNextState()
+int Transition::getNextState() const
 {
 	return nextState;
 }
