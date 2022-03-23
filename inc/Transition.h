@@ -16,6 +16,10 @@ public:
 	
 	/* Destructor por defecto */
 	~Transition();
+
+	/* Getters */
+	char getSymbol();
+	int getNextState();
 };
 
 #endif // TRANSITION

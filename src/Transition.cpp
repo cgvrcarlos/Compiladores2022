@@ -11,3 +11,13 @@ Transition::~Transition()
 	symbol = 0;
 	nextState = -1;
 }
+
+char Transition::getSymbol()
+{
+	return symbol;
+}
+
+int Transition::getNextState()
+{
+	return nextState;
+}
