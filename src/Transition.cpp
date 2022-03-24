@@ -21,3 +21,9 @@ int Transition::getNextState() const
 {
 	return nextState;
 }
+
+bool Transition:: operator< (const Transition& rhs) const
+{
+        if ((this->nextState <= rhs.nextState)) return true;
+        return false;
+}

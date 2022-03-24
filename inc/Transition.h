@@ -20,6 +20,9 @@ public:
 	/* Getters */
 	char getSymbol() const;
 	int getNextState() const;
+
+	/* Sobrecarga del Operador < */
+	bool operator<(const Transition&) const;
 };
 
 #endif // TRANSITION
