@@ -8,6 +8,7 @@
 
 #include <Alphabet.h>
 #include <State.h>
+#include <utilities.h>
 
 using namespace std;
 

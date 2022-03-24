@@ -8,6 +8,6 @@
 
 using namespace std;
 
-vector<string> splitString(string, char);
+vector<string> splitString(string, string);
 
 #endif // UTILITIES
