@@ -18,12 +18,6 @@ private:
 	/* Alfabeto del Automata */
 	Alphabet sigma;
 
-	/* Conjunto de estados */
-	set<State> states;
-
-	/* Estado Inicial */
-	State initialState;
-
 	/* Conjunto de Estados Finales */
 	set<State> finalStates;
 public:
