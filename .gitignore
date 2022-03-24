@@ -6,3 +6,6 @@
 
 # Ignora el ejecutable
 out
+
+# Ignora pruebas
+probe.cpp
