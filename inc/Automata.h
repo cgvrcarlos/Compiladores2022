@@ -1,8 +1,9 @@
-#if !defined(NFA)
-#define NFA
+#if !defined(AUTOMATA)
+#define AUTOMATA
 
 #include <set>
 #include <iterator>
+#include <fstream>
 #include <iostream>
 
 #include <Alphabet.h>
@@ -32,4 +33,4 @@ public:
 	~Automata();
 };
 
-#endif // NFA
+#endif // AUTOMATA

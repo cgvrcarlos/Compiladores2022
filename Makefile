@@ -9,7 +9,9 @@ TARGET = $(BINDIR)/out
 OBJS   = $(OBJDIR)/main.o       \
          $(OBJDIR)/Alphabet.o   \
 		 $(OBJDIR)/Transition.o \
-		 $(OBJDIR)/State.o
+		 $(OBJDIR)/State.o      \
+		 $(OBJDIR)/Automata.o	\
+		 $(OBJDIR)/utilities.o
 
 CFLAGS = -Wall -I$(INCDIR)
 
