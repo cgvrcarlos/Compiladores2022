@@ -29,6 +29,9 @@ public:
 
 	/* Metodo que imprime las Transiciones */
 	void print();
+
+	/* Sobrecarga del operador < */
+	bool operator<(const State&) const;
 };
 
 #endif // STATE

@@ -31,5 +31,10 @@ void State::print()
 	{
 		cout << "δ(" << stateID << ", " << (*it).getSymbol() << ") = " << (*it).getNextState() << endl;
 	}
-	
+}
+
+bool State:: operator< (const State& rhs) const
+{
+	if (this->stateID < rhs.stateID) return true;
+	return false;
 }
