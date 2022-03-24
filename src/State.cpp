@@ -25,7 +25,7 @@ int State::numberOfTransitions() const
 
 void State::print()
 {
-	cout << "Las transiciones del estado " << stateID << "son" << endl;
+	cout << "Las transiciones del estado " << stateID << " son" << endl;
 
 	for (set<Transition>::iterator it = deltaTransitions.begin(); it != deltaTransitions.end(); it++)
 	{
