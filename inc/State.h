@@ -15,6 +15,9 @@ private:
 	int stateID;
 	set <Transition> deltaTransitions;
 public:
+	/* Constructor por defecto */
+	State();
+
 	/* Constructor de State */
 	State(int);
 
