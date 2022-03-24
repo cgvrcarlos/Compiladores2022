@@ -24,6 +24,9 @@ public:
 	/* Destructor por defecto */
 	~State();
 
+	/* Getters */
+	int getStateID() const;
+
 	/* Metodo que agrega Transiciones al Estado */
 	void insertTransition(char, int);
 

@@ -15,6 +15,11 @@ State::~State()
 	deltaTransitions.clear();
 }
 
+int State::getStateID() const
+{
+	return stateID;
+}
+
 void State::insertTransition(char symbol_, int nextState_)
 {
 	Transition newTransition(symbol_, nextState_);
