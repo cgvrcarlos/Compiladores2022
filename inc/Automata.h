@@ -18,8 +18,8 @@ private:
 	/* Alfabeto del Automata */
 	Alphabet sigma;
 
-	/* Conjunto de Estados Finales */
-	set<State> finalStates;
+	/* Conjunto de estados */
+	set<State> states;
 public:
 	/* Constructor de un NFA a partir de un fichero */
 	Automata(string fileName);
