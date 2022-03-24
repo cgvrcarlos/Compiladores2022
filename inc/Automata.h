@@ -8,7 +8,9 @@
 #include <Alphabet.h>
 #include <State.h>
 
-class NFA
+using namespace std;
+
+class Automata
 {
 private:
 	/* Alfabeto del Automata */
@@ -24,10 +26,10 @@ private:
 	set<State> finalStates;
 public:
 	/* Constructor de un NFA a partir de un fichero */
-	NFA(string);
+	Automata(string fileName);
 	
 	/* Destructor por defecto */
-	~NFA();
+	~Automata();
 };
 
 #endif // NFA
