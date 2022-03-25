@@ -29,6 +29,8 @@ public:
 
 	/* Getters */
 	int getStateID() const;
+	bool getInitialState() const;
+	bool getFinalState() const;
 
 	/* Metodo que agrega Transiciones al Estado */
 	void insertTransition(char, int);

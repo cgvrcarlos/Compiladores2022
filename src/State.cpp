@@ -20,6 +20,16 @@ int State::getStateID() const
 	return stateID;
 }
 
+bool State::getInitialState() const
+{
+	return initialState;
+}
+
+bool State::getFinalState() const
+{
+	return finalState;
+}
+
 void State::insertTransition(char symbol_, int nextState_)
 {
 	Transition newTransition(symbol_, nextState_);
