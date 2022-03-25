@@ -32,6 +32,10 @@ public:
 	bool getInitialState() const;
 	bool getFinalState() const;
 
+	/* Setters */
+	void setInitialState();
+	void setFinalState();
+
 	/* Metodo que agrega Transiciones al Estado */
 	void insertTransition(char, int);
 

@@ -30,6 +30,16 @@ bool State::getFinalState() const
 	return finalState;
 }
 
+void State::setInitialState()
+{
+	initialState = true;
+}
+
+void State::setFinalState()
+{
+	finalState = true;
+}
+
 void State::insertTransition(char symbol_, int nextState_)
 {
 	Transition newTransition(symbol_, nextState_);
