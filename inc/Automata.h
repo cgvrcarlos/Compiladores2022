@@ -21,6 +21,9 @@ private:
 
 	/* Conjunto de estados */
 	list<State> states;
+
+	/* Estado del Automata */
+	bool isComplete;
 public:
 	/* Constructor de un NFA a partir de un fichero */
 	Automata(string fileName);

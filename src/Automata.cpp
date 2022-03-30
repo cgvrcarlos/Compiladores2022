@@ -12,6 +12,8 @@ Automata::Automata(string fileName)
 	text.open(fileName, ios::in);
 	numberLine = 0;
 
+	isComplete = false;
+
 	while (!text.eof())
 	{
 		getline(text, line);
@@ -63,7 +65,10 @@ Automata::~Automata()
 
 void Automata::print()
 {
-	cout << "_/ AUTOMATA FINITO NO DETERMINISTA \\_" << endl;
+	if (!isComplete)
+		cout << "_/ AUTOMATA FINITO NO DETERMINISTA \\_" << endl;
+	else
+		cout << "_/ AUTOMATA FINITO NO DETERMINISTA COMPLETO \\_" << endl;
 
 	cout << "\tQ = { ";
 	for (list<State>::iterator it = states.begin(); it != states.end(); it++)
