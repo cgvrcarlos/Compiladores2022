@@ -24,19 +24,34 @@ Automata::Automata(string fileName)
 			{
 				states.push_back(stoi(aux[i]));
 			}
-		}
+		}else if (numberLine == 1)
+		{
+			for (int i = 0; i < aux.size(); i++)
+			{
+				list<State>::iterator it = find(states.begin(), states.end(), stoi(aux[i]));
+
+				(*it).setFinalState();
+			}
+		}else if (numberLine == 2)
+		{
+			for (int i = 0; i < aux.size(); i++)
+			{
+				list<State>::iterator it = find(states.begin(), states.end(), stoi(aux[i]));
+
+				(*it).setInitialState();
+			}
+		}else if (numberLine == 3)
+		{
+			for (int i = 0; i < aux.size(); i++)
+			{
+				sigma.insert(aux[i].at(0));
+			}
+		}	
 
 		numberLine++;
 	}
-
-	for (list<State>::iterator it = states.begin(); it != states.end(); it++)
-	{
-		cout << (*it).getStateID() << endl;
-	}
-	
 }
 
 Automata::~Automata()
 {
-
 }

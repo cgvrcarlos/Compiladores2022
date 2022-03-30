@@ -5,6 +5,7 @@
 #include <iterator>
 #include <fstream>
 #include <iostream>
+#include <algorithm>
 
 #include <Alphabet.h>
 #include <State.h>
