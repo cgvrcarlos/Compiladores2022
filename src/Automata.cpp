@@ -46,7 +46,12 @@ Automata::Automata(string fileName)
 			{
 				sigma.insert(aux[i].at(0));
 			}
-		}	
+		}else
+		{
+			list<State>::iterator it = find(states.begin(), states.end(), stoi(aux[0]));
+
+			(*it).insertTransition(aux[1].at(0), stoi(aux[2]));
+		}
 
 		numberLine++;
 	}
@@ -88,4 +93,9 @@ void Automata::print()
 	cout << " }" << endl;
 
 	sigma.print();
+
+	for (list<State>::iterator it = states.begin(); it != states.end(); it++)
+	{
+		(*it).printTransitions();
+	}
 }
