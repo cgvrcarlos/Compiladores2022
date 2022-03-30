@@ -47,6 +47,9 @@ public:
 
 	/* Sobrecarga del operador < */
 	bool operator<(const State&) const;
+
+	/* Sobrecarga del operador == */
+	bool operator==(const State&) const;
 };
 
 #endif // STATE

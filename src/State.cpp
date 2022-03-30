@@ -67,3 +67,14 @@ bool State:: operator< (const State& rhs) const
 	if (this->stateID < rhs.stateID) return true;
 	return false;
 }
+
+bool State:: operator==(const State& rhs) const
+{
+	if (this->stateID == rhs.stateID)
+	{
+		return true;
+	}else
+	{
+		return false;
+	}
+}
