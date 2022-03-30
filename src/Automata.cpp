@@ -22,12 +22,14 @@ Automata::Automata(string fileName)
 		{
 			for (int i = 0; i < aux.size(); i++)
 			{
-				states.insert(stoi(aux[i]));
+				states.push_back(stoi(aux[i]));
 			}
 		}
+
+		numberLine++;
 	}
 
-	for (set<State>::iterator it = states.begin(); it != states.end(); it++)
+	for (list<State>::iterator it = states.begin(); it != states.end(); it++)
 	{
 		cout << (*it).getStateID() << endl;
 	}

@@ -1,7 +1,7 @@
-#include <Alphabet.h>
+#include <Automata.h>
 
 int main(int argc, char const *argv[])
 {
-	cout << "Hola Mundi" << endl;
+	Automata a1("probe.txt");
 	return 0;
 }

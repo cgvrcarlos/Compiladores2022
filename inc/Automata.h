@@ -1,7 +1,7 @@
 #if !defined(AUTOMATA)
 #define AUTOMATA
 
-#include <set>
+#include <list>
 #include <iterator>
 #include <fstream>
 #include <iostream>
@@ -19,7 +19,7 @@ private:
 	Alphabet sigma;
 
 	/* Conjunto de estados */
-	set<State> states;
+	list<State> states;
 public:
 	/* Constructor de un NFA a partir de un fichero */
 	Automata(string fileName);
