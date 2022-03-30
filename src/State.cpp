@@ -54,11 +54,11 @@ int State::numberOfTransitions() const
 
 void State::printTransitions()
 {
-	cout << "Las transiciones del estado " << stateID << " son" << endl;
+	cout << "\tq" << stateID << " Transiciones" << endl;
 
 	for (set<Transition>::iterator it = deltaTransitions.begin(); it != deltaTransitions.end(); it++)
 	{
-		cout << "δ(" << stateID << ", " << (*it).getSymbol() << ") = " << (*it).getNextState() << endl;
+		cout << "\t\tδ(" << stateID << ", " << (*it).getSymbol() << ") = " << (*it).getNextState() << endl;
 	}
 }
 
