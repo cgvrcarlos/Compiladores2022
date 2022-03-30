@@ -18,6 +18,9 @@ public:
 	/* Destructor por defecto */
 	~Alphabet();
 
+	/* Getter */
+	set<char> getSymbols() const;
+
 	/* Insertar elemento al Alfabeto */
 	void insert(char);
 

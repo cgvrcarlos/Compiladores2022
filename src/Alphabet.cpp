@@ -9,6 +9,11 @@ Alphabet::~Alphabet()
         symbols.clear();
 }
 
+set<char> Alphabet::getSymbols() const
+{
+	return symbols;
+}
+
 void Alphabet::insert(char element)
 {
         symbols.insert(element);
