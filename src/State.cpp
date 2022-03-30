@@ -30,6 +30,11 @@ bool State::getFinalState() const
 	return finalState;
 }
 
+set<Transition> State::getTransitions() const
+{
+	return deltaTransitions;
+}
+
 void State::setInitialState()
 {
 	initialState = true;

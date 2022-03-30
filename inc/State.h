@@ -31,6 +31,7 @@ public:
 	int getStateID() const;
 	bool getInitialState() const;
 	bool getFinalState() const;
+	set<Transition> getTransitions() const;
 
 	/* Setters */
 	void setInitialState();
