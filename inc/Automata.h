@@ -27,6 +27,9 @@ public:
 	
 	/* Destructor por defecto */
 	~Automata();
+
+	/* Impresion de quintupla del Automata */
+	void print();
 };
 
 #endif // AUTOMATA

@@ -43,7 +43,7 @@ public:
 	int numberOfTransitions() const;
 
 	/* Metodo que imprime las Transiciones */
-	void print();
+	void printTransitions();
 
 	/* Sobrecarga del operador < */
 	bool operator<(const State&) const;

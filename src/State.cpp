@@ -52,7 +52,7 @@ int State::numberOfTransitions() const
 	return deltaTransitions.size();
 }
 
-void State::print()
+void State::printTransitions()
 {
 	cout << "Las transiciones del estado " << stateID << " son" << endl;
 

@@ -21,13 +21,13 @@ int Alphabet::size() const
 
 void Alphabet::print()
 {
-    cout << "El Alphabeto es => {";
+    cout << "\tΣ = { ";
 
     set<char>::iterator it;
 
     for (it = symbols.begin() ; it != symbols.end() ; it++ )
     {
-        cout << *it << ",";
+        cout << "[" << *it << "]";
     }
-    cout << "}" << endl;
+    cout << " }" << endl;
 }

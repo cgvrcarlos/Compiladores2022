@@ -55,3 +55,37 @@ Automata::Automata(string fileName)
 Automata::~Automata()
 {
 }
+
+void Automata::print()
+{
+	cout << "_/ AUTOMATA FINITO NO DETERMINISTA \\_" << endl;
+
+	cout << "\tQ = { ";
+	for (list<State>::iterator it = states.begin(); it != states.end(); it++)
+	{
+		cout << "[" << (*it).getStateID() << "]";
+	}
+	cout << " }" << endl;
+
+	cout << "\tF = { ";
+	for (list<State>::iterator it = states.begin(); it != states.end(); it++)
+	{
+		if ((*it).getFinalState() == 1)
+		{
+			cout << "[" << (*it).getStateID() << "]";
+		}
+	}
+	cout << " }" << endl;
+
+	cout << "\tS = { ";
+	for (list<State>::iterator it = states.begin(); it != states.end(); it++)
+	{
+		if ((*it).getInitialState() == 1)
+		{
+			cout << "[" << (*it).getStateID() << "]";
+		}
+	}
+	cout << " }" << endl;
+
+	sigma.print();
+}
