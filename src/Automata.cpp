@@ -20,13 +20,13 @@ Automata::Automata(string fileName)
 
 		if (numberLine == 0)
 		{
-			for (int i = 0; i < aux.size(); i++)
+			for (int i = 0; i < (int) aux.size(); i++)
 			{
 				states.push_back(stoi(aux[i]));
 			}
 		}else if (numberLine == 1)
 		{
-			for (int i = 0; i < aux.size(); i++)
+			for (int i = 0; i < (int) aux.size(); i++)
 			{
 				list<State>::iterator it = find(states.begin(), states.end(), stoi(aux[i]));
 
@@ -34,7 +34,7 @@ Automata::Automata(string fileName)
 			}
 		}else if (numberLine == 2)
 		{
-			for (int i = 0; i < aux.size(); i++)
+			for (int i = 0; i < (int) aux.size(); i++)
 			{
 				list<State>::iterator it = find(states.begin(), states.end(), stoi(aux[i]));
 
@@ -42,7 +42,7 @@ Automata::Automata(string fileName)
 			}
 		}else if (numberLine == 3)
 		{
-			for (int i = 0; i < aux.size(); i++)
+			for (int i = 0; i < (int) aux.size(); i++)
 			{
 				sigma.insert(aux[i].at(0));
 			}
