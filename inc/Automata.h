@@ -30,7 +30,10 @@ public:
 	
 	/* Destructor por defecto */
 	~Automata();
-	
+
+	/* Setter */
+	void setIsComplete();
+
 	/* Completa el Automata */
 	void completeAutomata();
 

@@ -63,6 +63,11 @@ Automata::~Automata()
 {
 }
 
+void Automata::setIsComplete()
+{
+	isComplete = true;
+}
+
 void Automata::completeAutomata()
 {
 	/* Iteradores */
@@ -100,6 +105,8 @@ void Automata::completeAutomata()
 			flag = false;
 		}
 	}
+
+	setIsComplete();
 }
 
 void Automata::print()
