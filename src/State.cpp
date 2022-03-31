@@ -59,7 +59,7 @@ int State::numberOfTransitions() const
 
 void State::printTransitions()
 {
-	if (stateID = -1)
+	if (stateID == -1)
 		cout << "\tΘ" << " Transiciones" << endl;
 	else
 		cout << "\tq" << stateID << " Transiciones" << endl;;
