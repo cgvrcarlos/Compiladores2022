@@ -59,7 +59,11 @@ int State::numberOfTransitions() const
 
 void State::printTransitions()
 {
-	cout << "\tq" << stateID << " Transiciones" << endl;;
+	if (stateID = -1)
+		cout << "\tΘ" << " Transiciones" << endl;
+	else
+		cout << "\tq" << stateID << " Transiciones" << endl;;
+	
 
 	for (set<Transition>::iterator it = deltaTransitions.begin(); it != deltaTransitions.end(); it++)
 	{
