@@ -30,6 +30,9 @@ public:
 	
 	/* Destructor por defecto */
 	~Automata();
+	
+	/* Completa el Automata */
+	void completeAutomata();
 
 	/* Impresion de quintupla del Automata */
 	void print();

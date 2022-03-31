@@ -63,6 +63,45 @@ Automata::~Automata()
 {
 }
 
+void Automata::completeAutomata()
+{
+	/* Iteradores */
+	set<Transition>::iterator itTransition;
+	list<State>::iterator itState;
+	set<char>::iterator itAlphabet;
+
+	/* Variable que almacena una copia de las Transiciones de cada Estado */
+	set<Transition> transitionB;
+
+	/* Bandera que indica que tiene Transicion a un Simbolo */
+	bool flag = false;
+
+	/* Se obtiene el alfabeto */
+	set<char> symbolsB = sigma.getSymbols();
+	
+	for (itState = states.begin(); itState != states.end(); itState++)
+	{
+		for (itAlphabet = symbolsB.begin(); itAlphabet != symbolsB.end(); itAlphabet++)
+		{
+			transitionB = (*itState).getTransitions();
+
+			for (itTransition = transitionB.begin(); itTransition != transitionB.end(); itTransition++)
+			{
+				if ((*itTransition).getSymbol() == (*itAlphabet))
+				{
+					flag = true;
+					break;
+				}	
+			}
+
+			if (!flag)
+				(*itState).insertTransition((*itAlphabet), 0);
+
+			flag = false;
+		}
+	}
+}
+
 void Automata::print()
 {
 	if (!isComplete)
