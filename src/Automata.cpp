@@ -100,11 +100,19 @@ void Automata::completeAutomata()
 			}
 
 			if (!flag)
-				(*itState).insertTransition((*itAlphabet), 0);
+				(*itState).insertTransition((*itAlphabet), -1);
 
 			flag = false;
 		}
 	}
+
+	/* Se agrega el estado Vacio y sus Transiciones */
+	states.push_back(-1);
+
+	list<State>::iterator search = find(states.begin(), states.end(), -1);
+
+	for (itAlphabet = symbolsB.begin(); itAlphabet != symbolsB.end(); itAlphabet++)
+		(*search).insertTransition((*itAlphabet), -1);
 
 	setIsComplete();
 }
