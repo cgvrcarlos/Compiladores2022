@@ -4,6 +4,7 @@
 #include <set>
 #include <iterator>
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -23,6 +24,9 @@ public:
 
 	/* Insertar elemento al Alfabeto */
 	void insert(char);
+
+	/* Metodo que valida si el caracter existe en el alfabeto */
+	bool itBelongs(char) const;
 
 	/* Tamanio del Alfabeto */
 	int size() const;

@@ -19,6 +19,13 @@ void Alphabet::insert(char element)
         symbols.insert(element);
 }
 
+bool Alphabet::itBelongs(char s) const
+{
+	auto it = find(symbols.begin(), symbols.end(), s);
+
+	return it != symbols.end();
+}
+
 int Alphabet::size() const
 {
         return symbols.size();
