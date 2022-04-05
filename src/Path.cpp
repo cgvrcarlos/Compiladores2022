@@ -4,6 +4,12 @@ Path::Path()
 {
 }
 
+Path::Path(const Path& obj)
+{
+	nodes = obj.nodes;
+	errorM = obj.errorM;
+}
+
 Path::~Path()
 {
 	nodes.clear();
@@ -19,5 +25,3 @@ void Path::insertError(int state, char symbol)
 {
 	errorM.push_back(make_pair(state, symbol));
 }
-
-

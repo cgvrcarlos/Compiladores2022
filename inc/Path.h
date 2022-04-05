@@ -16,8 +16,15 @@ public:
 	/* Constructor por defecto */
 	Path();
 	
+	/* Constructor copia */
+	Path(const Path&);
+
 	/* Destructor por defecto */
 	~Path();
+
+	/* Getters */
+	vector<pair<int, char>> getNodes();
+	vector<pair<int, char>> getError();
 
 	/* Metodo que agrega nodos */
 	void insertNode(int, char);
