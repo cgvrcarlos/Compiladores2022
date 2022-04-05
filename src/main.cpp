@@ -9,6 +9,10 @@ int main(int argc, char const *argv[])
 	a1.completeAutomata();
 
 	a1.print();
+
+	a1.analizeString("+paz.");
 	
+	a1.printPaths();
+
 	return 0;
 }
