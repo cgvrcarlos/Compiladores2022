@@ -25,3 +25,22 @@ void Path::insertError(int state, char symbol)
 {
 	errorM.push_back(make_pair(state, symbol));
 }
+
+void Path::print()
+{
+	for(auto i : nodes)
+	{
+		if(i.second != '\0')
+			cout << i.first << "(" << i.second << ") -> ";
+		else
+			cout << i.first << endl;
+	}
+	
+	
+	cout << "Manejo de errores en: {";
+	for(auto i : errorM)
+	{
+		cout << "[" << i.first << "(" << i.second << ")" << "]";
+	}
+	cout << "}" << endl;
+}

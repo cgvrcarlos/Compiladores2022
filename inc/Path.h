@@ -27,6 +27,9 @@ public:
 
 	/* Metodo que agrega manejo de erores */
 	void insertError(int, char);
+
+	/* Impresion de Camino */
+	void print();
 };
 
 #endif // PATH
