@@ -11,7 +11,8 @@ OBJS   = $(OBJDIR)/main.o       \
 		 $(OBJDIR)/Transition.o \
 		 $(OBJDIR)/State.o      \
 		 $(OBJDIR)/Automata.o	\
-		 $(OBJDIR)/utilities.o
+		 $(OBJDIR)/utilities.o	\
+		 $(OBJDIR)/Path.o
 
 CFLAGS = -Wall -I$(INCDIR)
 
