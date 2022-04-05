@@ -24,7 +24,7 @@ Automata::Automata(string fileName)
 		{
 			for (int i = 0; i < (int) aux.size(); i++)
 			{
-				states.push_back(stoi(aux[i]));
+				states.emplace_back(stoi(aux[i]));
 			}
 		}else if (numberLine == 1)
 		{
@@ -107,7 +107,7 @@ void Automata::completeAutomata()
 	}
 
 	/* Se agrega el estado Vacio y sus Transiciones */
-	states.push_back(-1);
+	states.emplace_back(-1);
 
 	list<State>::iterator search = find(states.begin(), states.end(), -1);
 
@@ -156,5 +156,70 @@ void Automata::print()
 	for (list<State>::iterator it = states.begin(); it != states.end(); it++)
 	{
 		(*it).printTransitions();
+	}
+}
+
+void Automata::analizeString(string text)
+{
+	Path savePath;
+
+	cout << "Cadena a analizar -> " << text << endl << endl;
+
+	auto it = find_if(states.begin(), states.end(), 
+		[](const State& obj){return obj.getInitialState();});
+
+	deepSearch(text, (*it).getStateID(), savePath);
+}
+
+void Automata::deepSearch(string text, int state, Path savePath)
+{	
+	set<Transition>::iterator itTransition;
+
+	auto actualState = find(states.begin(), states.end(), state);
+
+	auto transitions = (*actualState).getTransitions();
+
+	if (text.size() >= 1)
+	{
+		if (sigma.itBelongs(text.at(0)))
+		{
+			savePath.insertNode(state, text.at(0));
+
+			for (itTransition = transitions.begin(); itTransition != transitions.end(); itTransition++)
+			{
+				if ((*itTransition).getSymbol() == text.at(0))
+				{
+					deepSearch(text.substr(1, text.size()-1), (*itTransition).getNextState(), savePath);
+				}	
+			}
+		}else
+		{
+			savePath.insertError(state, text.at(0));
+
+			deepSearch(text.substr(1, text.size()-1), state, savePath);
+		}		
+
+	}else
+	{
+		if ((*actualState).getFinalState())
+		{
+			savePath.insertNode(state, '\0');
+
+			paths.emplace_back(savePath);
+		}
+	}
+}
+
+void Automata::printPaths()
+{
+	if (paths.size() == 0)
+	{
+		cout << "La cadena no fue valida para el Automata" << endl;
+	}else
+	{
+		for (auto it = paths.begin(); it != paths.end(); it++)
+		{
+			(*it).print();
+		}
 	}
 }
